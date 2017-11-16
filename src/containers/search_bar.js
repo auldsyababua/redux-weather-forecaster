@@ -62,5 +62,5 @@ function mapDispatchToProps (dispatch) {
 
 //null is first argument because no state is needed here,
 //and mapDispatchToProps has to be the second arg no matter what.
-//This functions gives us access to this.props.featchWeather in our methods above.
+//This functions gives us access to this.props.featchWeather action creator in our methods above.
 export default connect(null, mapDispatchToProps)(SearchBar);
