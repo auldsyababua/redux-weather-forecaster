@@ -1,4 +1,4 @@
-import FETCH_WEATHER from '../actions/index';
+import { FETCH_WEATHER } from '../actions/index';
 
 //first argument is always state in a reducer
 export default function (state = [], action) {
