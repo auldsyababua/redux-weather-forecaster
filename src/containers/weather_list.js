@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Chart from '../components/chart';
+import GoogleMap from '../components/goole_map';
 
 class WeatherList extends Component {
   //this functions reners a single row of city data
@@ -13,16 +14,20 @@ class WeatherList extends Component {
     return (
       <tr key={name}>
         <td>
+          <GoogleMap />
+        </td>
+        <td>
           {name}
         </td>
+        //data and color are props being passed to the chart component
         <td>
-          <Chart data={temps} color='orange' />
+          <Chart data={temps} color='orange' units="K"/>
         </td>
         <td>
-          <Chart data={pressures} color='green' />
+          <Chart data={pressures} color='green' units="hPa"/>
         </td>
         <td>
-          <Chart data={humidities} color='blue' />
+          <Chart data={humidities} color='blue' units="%"/>
         </td>
       </tr>
     );
@@ -33,9 +38,9 @@ class WeatherList extends Component {
         <thead>
           <tr>
             <th>City</th>
-            <th>Temperature</th>
-            <th>Pressure</th>
-            <th>Humidity</th>
+            <th>Temperature (K)</th>
+            <th>Pressure (hPa)</th>
+            <th>Humidity (%)</th>
           </tr>
         </thead>
         <tbody>
