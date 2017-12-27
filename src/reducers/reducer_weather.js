@@ -1,6 +1,8 @@
 import { FETCH_WEATHER } from '../actions/index';
 
 //first argument is always state in a reducer
+//we do this because we never want to alter the existing state.
+//we want to completely replace the current state
 export default function (state = [], action) {
   switch (action.type) {
     case FETCH_WEATHER:
