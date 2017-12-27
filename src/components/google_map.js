@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-class GoogleMap extends Compnent {
+class GoogleMap extends Component {
   //after component renders, create a new google maps
   //first arg is a reference to an html node - this is where google will embed the map on your onInputChange
-  //second arg is the properties the map should have
-  ComponentDidMount() {
+  //second arg is an options argument: the properties the map should have.
+  componentDidMount() {
     new google.maps.Map(this.refs.map, {
       zoom: 12,
       center: {
@@ -13,8 +13,9 @@ class GoogleMap extends Compnent {
       }
     });
   }
+
   render() {
-    return <div ref='map' />;
+    return <div ref="map" />;
   }
 }
 

@@ -4,9 +4,15 @@ td, th {
 }
 
 .input-group {
-  margin: 20px 0;
+  margin: 20px 0px;
 }
 
 svg {
   height: 150px;
+}
+
+/*find the first td AND find the first td and its child div (the google map) and give it these heights and widths*/
+td:first-of-type, td:first-of-type > div {
+  height: 200px;
+  width: 250px;
 }
